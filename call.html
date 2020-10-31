@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>JavaScript 函数</h1>
+
+<p>此例调用 person 的 fullName 方法，在 person1 上使用它：</p>
+
+<p id="demo"></p>
+
+<script>
+    var person = {
+        fullName: function(city, country) {
+            return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+    }
+    var person1 = {
+        firstName:"Bill",
+        lastName: "Gates"
+    }
+    var person2 = {
+        firstName:"Steve",
+        lastName: "Jobs"
+    }
+    var x = person.fullName.call(person1, "Seatle", "USA");
+    document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
