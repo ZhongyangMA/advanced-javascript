@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>JavaScript 对象构造函数（对象构造器）</h1>
+
+<p id="demo"></p>
+
+<script>
+
+    // Person 对象的构造器函数
+    function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+
+    // 创建 Person 对象
+    var myFriend = new Person("Bill", "Gates", 62, "blue");
+    var myBrother = new Person("Steve", "Jobs", 56, "green");
+
+    // 显示年龄
+    document.getElementById("demo").innerHTML =
+        "My friend is " + myFriend.age + ". My brother is " + myBrother.age + ".";
+
+</script>
+
+</body>
+</html>
